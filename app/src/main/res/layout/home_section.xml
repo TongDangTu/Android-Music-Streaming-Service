@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="20dp"
+    android:orientation="vertical"
+    >
+    <TextView
+        android:id="@+id/tvSectionName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="Section name 1"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_marginStart="20dp"
+        />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcvSectionItem"
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvSectionName"
+
+        />
+
+
+</LinearLayout>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <application
+        android:name=".MussApplication"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MVVMPattern"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31">
+        <activity
+            android:name=".views.ChoosePlaylist"
+            android:exported="false" />
+
+        <service
+            android:name=".services.MediaService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name=".views.CategoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".views.ArtistActivity"
+            android:exported="false" />
+
+        <service
+            android:name=".services.MyService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name=".views.PlaylistActivity"
+            android:exported="false" />
+        <activity
+            android:name=".views.FavoritesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".views.HistoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".views.LoginActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".views.MusicPlayerActivity"
+            android:exported="false"
+            android:label="@string/title_activity_music_player"
+            android:theme="@style/Theme.MVVMPattern" />
+        <activity
+            android:name=".views.SignupActivity"
+            android:exported="false"
+            android:label="@string/title_activity_signup"
+            android:theme="@style/Theme.MVVMPattern" />
+        <activity
+            android:name=".views.MainActivity"
+            android:exported="true"
+            android:label="Home"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MVVMPattern">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+    </application>
+
+</manifest>
